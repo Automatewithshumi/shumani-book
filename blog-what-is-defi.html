@@ -134,7 +134,6 @@
       --white: #FEFEFE;
       --muted: #6B6560;
       --border: rgba(13,13,13,0.12);
-      --content-width: 720px;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -265,7 +264,7 @@
     }
 
     /* ===== ARTICLE BODY ===== */
-    .post-body { min-width: 0; }
+    .post-body { min-width: 0; max-width: 100%; overflow-wrap: break-word; }
 
     /* TOC */
     .toc {
