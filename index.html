@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO META TAGS ===== -->
+  <title>Shumani Phaswana | Author of DeFi, AI & Technology Books for Beginners</title>
+  <meta name="description" content="Shumani Phaswana writes essential books on DeFi, AI for testers, and AI for everyone. Beginner-friendly guides on decentralized finance and artificial intelligence — no tech skills required." />
+  <meta name="keywords" content="DeFi book for beginners, decentralized finance guide, AI for testers book, AI for everyone book, Shumani Phaswana, blockchain books, AI daily life guide, learn DeFi, artificial intelligence beginners" />
+  <meta name="author" content="Shumani Phaswana" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://shumaniphaswana.com/" />
+
+  <!-- ===== OPEN GRAPH (Social Sharing) ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shumani Phaswana — Author | DeFi & AI Books" />
+  <meta property="og:description" content="Essential books on Decentralized Finance and AI Testing. Written for beginners and professionals alike." />
+  <meta property="og:url" content="https://shumaniphaswana.com/" />
+  <meta property="og:image" content="https://shumaniphaswana.com/og-image.jpg" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shumani Phaswana — DeFi & AI Books" />
+  <meta name="twitter:description" content="Beginner-friendly guides on Decentralized Finance and AI Testing. Get your copies on Amazon." />
+
+  <!-- ===== STRUCTURED DATA (JSON-LD) — Google Rich Results ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://shumaniphaswana.com/#author",
+        "name": "Shumani Phaswana",
+        "url": "https://shumaniphaswana.com",
+        "sameAs": [],
+        "jobTitle": "Author",
+        "description": "Author specializing in decentralized finance, AI, and technology education for everyday readers."
+      },
+      {
+        "@type": "Book",
+        "name": "Demystifying DeFi: A Beginners Guide to Decentralized Finance",
+        "author": { "@id": "https://shumaniphaswana.com/#author" },
+        "url": "https://www.amazon.com/dp/B0FG16LHKW",
+        "bookFormat": "https://schema.org/Paperback",
+        "inLanguage": "en",
+        "offers": {
+          "@type": "Offer",
+          "seller": { "@type": "Organization", "name": "Amazon" },
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Book",
+        "name": "AI for Testers",
+        "author": { "@id": "https://shumaniphaswana.com/#author" },
+        "url": "https://www.amazon.com.br/dp/B0FJ78RTFV",
+        "bookFormat": "https://schema.org/EBook",
+        "inLanguage": "en",
+        "offers": {
+          "@type": "Offer",
+          "seller": { "@type": "Organization", "name": "Amazon" },
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Book",
+        "name": "AI for Everyone: The Beginner's Guide to Using Artificial Intelligence in Your Daily Life",
+        "author": { "@id": "https://shumaniphaswana.com/#author" },
+        "url": "https://www.amazon.com/dp/B0H3CFQVPN",
+        "bookFormat": "https://schema.org/EBook",
+        "inLanguage": "en",
+        "offers": {
+          "@type": "Offer",
+          "seller": { "@type": "Organization", "name": "Amazon" },
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://shumaniphaswana.com",
+        "name": "Shumani Phaswana",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://shumaniphaswana.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== GOOGLE ANALYTICS 4 — Replace G-XXXXXXXXXX with your Measurement ID ===== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      page_title: document.title,
+      page_location: window.location.href
+    });
+
+    // ===== TRACK AMAZON CLICKS AS CONVERSIONS =====
+    function trackBookClick(bookTitle, amazonUrl) {
+      gtag('event', 'amazon_book_click', {
+        event_category: 'Book Sales',
+        event_label: bookTitle,
+        value: 1
+      });
+      gtag('event', 'conversion', {
+        send_to: 'G-XXXXXXXXXX',
+        event_category: 'Revenue',
+        event_label: bookTitle
+      });
+      setTimeout(() => { window.open(amazonUrl, '_blank'); }, 150);
+      return false;
+    }
+
+    // Track scroll depth
+    let scrollDepths = [25, 50, 75, 90];
+    window.addEventListener('scroll', () => {
+      const scrolled = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      scrollDepths = scrollDepths.filter(d => {
+        if (scrolled >= d) {
+          gtag('event', 'scroll_depth', { event_label: d + '%' });
+          return false;
+        }
+        return true;
+      });
+    });
+  </script>
+
+  <!-- ===== FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink: #0D0D0D;
+      --paper: #F5F0E8;
+      --cream: #EDE8DC;
+      --gold: #C8922A;
+      --gold-light: #E8B84B;
+      --rust: #B04A2A;
+      --teal: #1A6B6B;
+      --teal-dark: #0F4444;
+      --white: #FEFEFE;
+      --muted: #6B6560;
+      --border: rgba(13,13,13,0.12);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ===== GRAIN OVERLAY ===== */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.5;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(245,240,232,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    .nav-cta {
+      background: var(--ink);
+      color: var(--paper) !important;
+      padding: 0.45rem 1.1rem;
+      border-radius: 3px;
+      font-size: 0.8rem !important;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--teal) !important; color: var(--white) !important; }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: clamp(2rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -10%;
+      top: -10%;
+      width: 60%;
+      height: 120%;
+      background: radial-gradient(ellipse at 60% 40%, rgba(200,146,42,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--teal);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 440px;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.85rem 2rem;
+      border-radius: 3px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      transition: all 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--teal);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .btn-outline {
+      border: 1.5px solid var(--ink);
+      color: var(--ink);
+      padding: 0.85rem 2rem;
+      border-radius: 3px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+
+    .btn-outline:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    /* ===== HERO BOOK STACK ===== */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .book-stack {
+      position: relative;
+      width: 300px;
+      height: 380px;
+    }
+
+    .book-card {
+      position: absolute;
+      border-radius: 6px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25), 0 6px 20px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      overflow: hidden;
+    }
+
+    .book-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .book-card:nth-child(1) {
+      width: 170px;
+      height: 240px;
+      top: 20px;
+      left: 20px;
+      transform: rotate(-5deg);
+    }
+
+    .book-card:nth-child(2) {
+      width: 170px;
+      height: 240px;
+      top: 55px;
+      left: 95px;
+      transform: rotate(3.5deg);
+    }
+
+    .book-card:nth-child(3) {
+      width: 170px;
+      height: 240px;
+      top: 95px;
+      left: 48px;
+      transform: rotate(-1.5deg);
+    }
+
+    .book-card:hover {
+      transform: rotate(0deg) translateY(-10px) scale(1.05) !important;
+      z-index: 10;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.3), 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    /* ===== TRUST BAR ===== */
+    .trust-bar {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 1rem clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      overflow: hidden;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      white-space: nowrap;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+    }
+
+    .trust-icon { color: var(--gold-light); font-size: 1rem; }
+
+    /* ===== SECTION COMMON ===== */
+    section { padding: clamp(3rem, 7vw, 6rem) clamp(1.5rem, 5vw, 4rem); }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .section-body {
+      color: var(--muted);
+      max-width: 560px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    /* ===== BOOKS SECTION ===== */
+    .books-section {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .books-header { margin-bottom: 3rem; }
+
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .book-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .book-item:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
+    }
+
+    .book-cover-area {
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--cream);
+      position: relative;
+    }
+
+    .book-cover-area img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .book-item:hover .book-cover-area img {
+      transform: scale(1.04);
+    }
+
+    .cover-defi { background: linear-gradient(135deg, var(--teal-dark), var(--teal)); }
+    .cover-ai { background: linear-gradient(135deg, #2A1A0A, #7A4520); }
+    .cover-3 { background: linear-gradient(135deg, var(--rust), #6B2010); }
+
+    .book-body { padding: 1.5rem; }
+
+    .book-badge {
+      display: inline-block;
+      background: rgba(200,146,42,0.12);
+      color: var(--gold);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 2px;
+      margin-bottom: 0.8rem;
+    }
+
+    .book-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 0.6rem;
+    }
+
+    .book-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 1.2rem;
+    }
+
+    .book-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .topic-tag {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      font-size: 0.72rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      color: var(--muted);
+    }
+
+    .amazon-btn {
+      display: block;
+      width: 100%;
+      background: var(--gold);
+      color: var(--ink);
+      text-align: center;
+      padding: 0.8rem;
+      border-radius: 3px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: all 0.25s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .amazon-btn:hover {
+      background: var(--gold-light);
+      box-shadow: 0 4px 14px rgba(200,146,42,0.3);
+    }
+
+    /* ===== WHY READ ===== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      margin-top: 3rem;
+    }
+
+    .why-features { display: flex; flex-direction: column; gap: 1.8rem; }
+
+    .why-feature {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+
+    .feature-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--gold);
+      background: rgba(200,146,42,0.1);
+      border: 1px solid rgba(200,146,42,0.3);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .feature-text h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .feature-text p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+
+    .why-quote-area {
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 6px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-quote-area::before {
+      content: '"';
+      font-family: 'Playfair Display', serif;
+      font-size: 14rem;
+      color: rgba(255,255,255,0.04);
+      position: absolute;
+      top: -3rem;
+      left: 0.5rem;
+      line-height: 1;
+    }
+
+    .quote-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .quote-cta { display: flex; flex-direction: column; gap: 0.8rem; }
+
+    .quote-cta .btn-primary { background: var(--gold); color: var(--ink); justify-content: center; }
+    .quote-cta .btn-primary:hover { background: var(--gold-light); }
+
+    /* ===== BLOG SECTION ===== */
+    .blog-section { background: var(--white); }
+
+    .blog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 2.5rem;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .blog-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--paper);
+      transition: box-shadow 0.3s, transform 0.3s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .blog-card:hover {
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+
+    .blog-thumb {
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+
+    .thumb-teal { background: linear-gradient(135deg, #E8F4F4, #C5E0E0); }
+    .thumb-warm { background: linear-gradient(135deg, #F4EDE8, #E0D0C5); }
+    .thumb-gold { background: linear-gradient(135deg, #F4EED8, #E0D4A5); }
+    .thumb-dark { background: linear-gradient(135deg, #E8E8F4, #C5C5E0); }
+
+    .blog-body { padding: 1.3rem; }
+
+    .blog-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-excerpt { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
+
+    .blog-meta {
+      margin-top: 0.8rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .see-all {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--teal);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      letter-spacing: 0.03em;
+    }
+
+    .see-all:hover { color: var(--teal-dark); }
+
+    /* ===== NEWSLETTER ===== */
+    .newsletter-section {
+      background: var(--teal-dark);
+      color: var(--paper);
+      text-align: center;
+    }
+
+    .newsletter-section .section-label { color: var(--gold-light); }
+
+    .newsletter-section .section-title { color: var(--paper); }
+
+    .newsletter-section .section-body { color: rgba(245,240,232,0.7); margin: 0 auto 2.5rem; }
+
+    .email-form {
+      display: flex;
+      max-width: 460px;
+      margin: 0 auto;
+      gap: 0;
+      border: 1.5px solid rgba(200,146,42,0.5);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .email-input {
+      flex: 1;
+      padding: 0.9rem 1.2rem;
+      background: rgba(255,255,255,0.06);
+      border: none;
+      color: var(--paper);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .email-input::placeholder { color: rgba(245,240,232,0.4); }
+
+    .email-submit {
+      background: var(--gold);
+      color: var(--ink);
+      border: none;
+      padding: 0.9rem 1.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .email-submit:hover { background: var(--gold-light); }
+
+    .newsletter-note {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: rgba(245,240,232,0.4);
+    }
+
+    /* ===== ABOUT ===== */
+    .about-section {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .about-avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal-dark), var(--teal));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+
+    .about-content .section-title { margin-bottom: 1rem; }
+
+    .about-content p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .about-content p:last-of-type { margin-bottom: 1.5rem; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 3rem clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand .nav-logo { font-size: 1.3rem; color: var(--paper); display: block; margin-bottom: 0.8rem; }
+    .footer-brand .nav-logo span { color: var(--gold); }
+    .footer-brand p { font-size: 0.85rem; color: rgba(245,240,232,0.5); line-height: 1.7; max-width: 280px; }
+
+    .footer-col h5 {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.4);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: rgba(245,240,232,0.65);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--paper); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: rgba(245,240,232,0.35);
+    }
+
+    .footer-bottom a { color: rgba(245,240,232,0.45); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--paper); }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+    .hero h1 { animation: fadeUp 0.6s 0.1s ease both; }
+    .hero-sub { animation: fadeUp 0.6s 0.2s ease both; }
+    .hero-actions { animation: fadeUp 0.6s 0.3s ease both; }
+    .hero-visual { animation: fadeUp 0.8s 0.2s ease both; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 3rem; }
+      .hero-visual { display: none; }
+      .why-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-grid { grid-template-columns: 1fr; text-align: center; }
+      .about-avatar { margin: 0 auto; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+      nav .nav-links { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .books-grid { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .blog-header { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+      .trust-bar { gap: 1.5rem; flex-wrap: wrap; }
+    }
+
+    /* ===== SEO BLOG POST PAGE (hidden, for structure) ===== */
+    .seo-posts-nav { display: none; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav-logo">Shumani <span>Phaswana</span></a>
+    <ul class="nav-links">
+      <li><a href="#books">Books</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#books" class="nav-cta">Get the Books →</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" role="banner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Author · Educator · Technologist</div>
+      <h1>Making <em>Complex</em><br/>Finance &amp; AI<br/>Simple.</h1>
+      <p class="hero-sub">
+        Books that break down Decentralized Finance and Artificial Intelligence for everyday readers — no jargon, no gatekeeping. Written by Shumani Phaswana.
+      </p>
+      <div class="hero-actions">
+        <a href="#books" class="btn-primary" onclick="gtag('event','hero_cta_click',{event_category:'Engagement'})">
+          Browse the Books ↓
+        </a>
+        <a href="#blog" class="btn-outline">Free Articles</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="book-stack">
+        <div class="book-card">
+          <img src="book-defi.jpg" alt="Demystifying DeFi by Shumani Phaswana" />
+        </div>
+        <div class="book-card">
+          <img src="book-ai-testers.jpg" alt="AI for Testers by Shumani Phaswana" />
+        </div>
+        <div class="book-card">
+          <img src="book-ai-everyone.jpg" alt="AI for Everyone by Shumani Phaswana" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== TRUST BAR ===== -->
+  <div class="trust-bar" role="complementary" aria-label="Book highlights">
+    <div class="trust-item"><span class="trust-icon">★</span> Available on Amazon</div>
+    <div class="trust-item"><span class="trust-icon">📖</span> Beginner-Friendly Writing</div>
+    <div class="trust-item"><span class="trust-icon">⚡</span> DeFi &amp; Crypto Explained</div>
+    <div class="trust-item"><span class="trust-icon">🤖</span> AI for Software Testers</div>
+    <div class="trust-item"><span class="trust-icon">🌍</span> Global Readership</div>
+  </div>
+
+  <!-- ===== BOOKS SECTION ===== -->
+  <section class="books-section" id="books" aria-labelledby="books-heading">
+    <div class="books-header">
+      <div class="section-label">The Collection</div>
+      <h2 class="section-title" id="books-heading">Books That Change How You Think About Money &amp; Technology</h2>
+      <p class="section-body">Each title is crafted to be accessible — whether you're brand new to crypto or a software tester navigating AI tools in your workflow.</p>
+    </div>
+
+    <div class="books-grid">
+
+      <!-- BOOK 1: DeFi -->
+      <article class="book-item" itemscope itemtype="https://schema.org/Book">
+        <div class="book-cover-area cover-defi">
+          <img src="book-defi.jpg" alt="Demystifying DeFi: A Beginner's Guide to Decentralized Finance by Shumani Phaswana" itemprop="image" loading="lazy" />
+        </div>
+        <div class="book-body">
+          <div class="book-badge">DeFi · Blockchain · Finance</div>
+          <h3 class="book-name" itemprop="name">Demystifying DeFi</h3>
+          <p class="book-desc" itemprop="description">
+            The clearest beginner's guide to decentralized finance on the market. Understand how DeFi works, why it matters, and how to navigate this new financial system — without needing a computer science degree.
+          </p>
+          <div class="book-topics">
+            <span class="topic-tag">What is DeFi?</span>
+            <span class="topic-tag">Liquidity Pools</span>
+            <span class="topic-tag">Yield Farming</span>
+            <span class="topic-tag">Smart Contracts</span>
+            <span class="topic-tag">DEX vs CEX</span>
+            <span class="topic-tag">DeFi Risks</span>
+          </div>
+          <button class="amazon-btn" onclick="return trackBookClick('Demystifying DeFi', 'https://www.amazon.com/Demystifying-DeFi-Beginners-Decentralized-Finance/dp/B0FG16LHKW')">
+            📦 Get it on Amazon →
+          </button>
+        </div>
+        <meta itemprop="author" content="Shumani Phaswana" />
+        <meta itemprop="url" content="https://www.amazon.com/dp/B0FG16LHKW" />
+      </article>
+
+      <!-- BOOK 2: AI Testers -->
+      <article class="book-item" itemscope itemtype="https://schema.org/Book">
+        <div class="book-cover-area cover-ai">
+          <img src="book-ai-testers.jpg" alt="AI for Testers: How to Stay Relevant, Fast and Valuable in the Age of Automation by Shumani Phaswana" itemprop="image" loading="lazy" />
+        </div>
+        <div class="book-body">
+          <div class="book-badge">AI · Software Testing · QA</div>
+          <h3 class="book-name" itemprop="name">AI for Testers</h3>
+          <p class="book-desc" itemprop="description">
+            Software testing is changing fast. This practical guide helps QA engineers and testers understand how AI tools are reshaping the industry — and how to use them to stay ahead, not get replaced.
+          </p>
+          <div class="book-topics">
+            <span class="topic-tag">AI Testing Tools</span>
+            <span class="topic-tag">Test Automation</span>
+            <span class="topic-tag">ChatGPT for QA</span>
+            <span class="topic-tag">Future of Testing</span>
+            <span class="topic-tag">Prompt Engineering</span>
+          </div>
+          <button class="amazon-btn" onclick="return trackBookClick('AI for Testers', 'https://www.amazon.com.br/AI-Testers-English-Shumani-Phaswana-ebook/dp/B0FJ78RTFV')">
+            📦 Get it on Amazon →
+          </button>
+        </div>
+        <meta itemprop="author" content="Shumani Phaswana" />
+        <meta itemprop="url" content="https://www.amazon.com.br/dp/B0FJ78RTFV" />
+      </article>
+
+      <!-- BOOK 3: AI for Everyone -->
+      <article class="book-item" itemscope itemtype="https://schema.org/Book">
+        <div class="book-cover-area cover-3">
+          <img src="book-ai-everyone.jpg" alt="AI for Everyone: The Beginner's Guide to Using Artificial Intelligence in Your Daily Life by Shumani Phaswana" itemprop="image" loading="lazy" />
+        </div>
+        <div class="book-body">
+          <div class="book-badge">AI · Productivity · Daily Life</div>
+          <h3 class="book-name" itemprop="name">AI for Everyone</h3>
+          <p class="book-desc" itemprop="description">
+            You don't need to be a tech expert to use AI. This beginner's guide shows everyday people how to save hours every week, boost creativity, and stay ahead — using AI tools available right now. No tech skills required.
+          </p>
+          <div class="book-topics">
+            <span class="topic-tag">Save Time with AI</span>
+            <span class="topic-tag">Boost Creativity</span>
+            <span class="topic-tag">No Tech Skills</span>
+            <span class="topic-tag">ChatGPT for Life</span>
+            <span class="topic-tag">AI at Work</span>
+            <span class="topic-tag">Stay Ahead</span>
+          </div>
+          <button class="amazon-btn" onclick="return trackBookClick('AI for Everyone', 'https://www.amazon.com/dp/B0H3CFQVPN')">
+            📦 Get it on Amazon →
+          </button>
+        </div>
+        <meta itemprop="author" content="Shumani Phaswana" />
+        <meta itemprop="url" content="https://www.amazon.com/dp/B0H3CFQVPN" />
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== WHY READ ===== -->
+  <section class="why-section" id="why" aria-labelledby="why-heading">
+    <div class="section-label">Why Read These Books</div>
+    <h2 class="section-title" id="why-heading">Written for People, Not Academics</h2>
+
+    <div class="why-grid">
+      <div class="why-features">
+        <div class="why-feature">
+          <div class="feature-num">01</div>
+          <div class="feature-text">
+            <h4>No Jargon, No Gatekeeping</h4>
+            <p>Every concept is explained from the ground up. These books respect your intelligence while assuming zero prior knowledge.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="feature-num">02</div>
+          <div class="feature-text">
+            <h4>Practical, Not Theoretical</h4>
+            <p>You'll finish each book knowing what to actually do — whether that's navigating DeFi platforms or using AI in your testing workflow.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="feature-num">03</div>
+          <div class="feature-text">
+            <h4>Timely Topics That Matter Now</h4>
+            <p>DeFi and AI aren't trends — they're reshaping entire industries. Getting educated now puts you years ahead of most people.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="feature-num">04</div>
+          <div class="feature-text">
+            <h4>Compact and Respect Your Time</h4>
+            <p>Dense with value, lean on fluff. Each page earns its place. Read on a weekend, apply the knowledge for a lifetime.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-quote-area">
+        <blockquote class="quote-text">
+          "Understanding DeFi isn't optional anymore for anyone who wants financial literacy in the modern world. And every software tester who ignores AI right now is falling behind."
+        </blockquote>
+        <p style="font-size:0.85rem; color: rgba(245,240,232,0.6); margin-bottom: 1.8rem; font-style: italic;">— Shumani Phaswana, Author</p>
+        <div class="quote-cta">
+          <button class="btn-primary" onclick="return trackBookClick('Demystifying DeFi', 'https://www.amazon.com/Demystifying-DeFi-Beginners-Decentralized-Finance/dp/B0FG16LHKW')">
+            Start with DeFi →
+          </button>
+          <button class="btn-primary" onclick="return trackBookClick('AI for Testers', 'https://www.amazon.com.br/AI-Testers-English-Shumani-Phaswana-ebook/dp/B0FJ78RTFV')" style="background: var(--teal);">
+            Start with AI Testing →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG ===== -->
+  <section class="blog-section" id="blog" aria-labelledby="blog-heading">
+    <div class="blog-header">
+      <div>
+        <div class="section-label">Free Resources</div>
+        <h2 class="section-title" id="blog-heading">Articles Worth Reading</h2>
+      </div>
+      <a href="#blog" class="see-all">All Articles →</a>
+    </div>
+
+    <div class="blog-grid">
+
+      <a href="#" class="blog-card" onclick="gtag('event','blog_click',{event_label:'What is DeFi'})">
+        <div class="blog-thumb thumb-teal">⛓️</div>
+        <div class="blog-body">
+          <div class="blog-tag">DeFi · Beginners</div>
+          <h3 class="blog-title">What Is DeFi? A Plain-English Explanation for Total Beginners</h3>
+          <p class="blog-excerpt">Decentralized finance explained in a way your parents could understand — no blockchain background required.</p>
+          <div class="blog-meta">8 min read · DeFi Basics</div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" onclick="gtag('event','blog_click',{event_label:'DeFi vs Banks'})">
+        <div class="blog-thumb thumb-warm">🏦</div>
+        <div class="blog-body">
+          <div class="blog-tag">DeFi · Finance</div>
+          <h3 class="blog-title">DeFi vs Traditional Banks: What's Actually Different?</h3>
+          <p class="blog-excerpt">How decentralized protocols compare to the banking system you've used your whole life — and why it matters.</p>
+          <div class="blog-meta">6 min read · DeFi Explained</div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" onclick="gtag('event','blog_click',{event_label:'AI in QA'})">
+        <div class="blog-thumb thumb-gold">🤖</div>
+        <div class="blog-body">
+          <div class="blog-tag">AI · Software Testing</div>
+          <h3 class="blog-title">How AI Is Changing Software Testing in 2025 (And What to Do About It)</h3>
+          <p class="blog-excerpt">QA professionals face a pivotal shift. Here's how to embrace AI tools without losing what makes you valuable.</p>
+          <div class="blog-meta">10 min read · AI for QA</div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" onclick="gtag('event','blog_click',{event_label:'Smart Contracts'})">
+        <div class="blog-thumb thumb-dark">📜</div>
+        <div class="blog-body">
+          <div class="blog-tag">Blockchain · DeFi</div>
+          <h3 class="blog-title">Smart Contracts Explained: Why They're the Engine of DeFi</h3>
+          <p class="blog-excerpt">The self-executing code that powers every DeFi protocol — demystified in plain language with real examples.</p>
+          <div class="blog-meta">7 min read · Blockchain Basics</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter-section" aria-labelledby="newsletter-heading">
+    <div class="section-label">Stay Sharp</div>
+    <h2 class="section-title" id="newsletter-heading">Get Weekly Insights on DeFi &amp; AI</h2>
+    <p class="section-body">
+      Join readers who stay ahead of the curve. No spam — just clear, actionable insights on decentralized finance and AI, delivered weekly.
+    </p>
+    <div class="email-form" role="form" aria-label="Newsletter signup">
+      <input type="email" class="email-input" placeholder="your@email.com" aria-label="Email address" />
+      <button class="email-submit" onclick="gtag('event','newsletter_signup',{event_category:'Lead Generation'})">Subscribe →</button>
+    </div>
+    <p class="newsletter-note">No spam. Unsubscribe any time. ~1,000 words per week.</p>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about-section" id="about" aria-labelledby="about-heading">
+    <div class="about-grid">
+      <div class="about-avatar" aria-hidden="true">SP</div>
+      <div class="about-content">
+        <div class="section-label">The Author</div>
+        <h2 class="section-title" id="about-heading">Shumani Phaswana</h2>
+        <p>
+          Shumani Phaswana writes at the intersection of technology and financial literacy — making the most transformative topics of our time accessible to everyone, not just insiders.
+        </p>
+        <p>
+          With books covering Decentralized Finance and the future of AI in software testing, Shumani's mission is clear: complex ideas deserve simple explanations. Every reader deserves to understand the tools reshaping the world.
+        </p>
+        <a href="#books" class="btn-primary" style="display: inline-flex;">See All Books →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">Shumani <span>Phaswana</span></a>
+        <p>Author of books on DeFi, AI, and the technologies reshaping how we work and manage money. Available on Amazon worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Books</h5>
+        <ul>
+          <li><a href="https://www.amazon.com/Demystifying-DeFi-Beginners-Decentralized-Finance/dp/B0FG16LHKW" target="_blank" rel="noopener">Demystifying DeFi</a></li>
+          <li><a href="https://www.amazon.com.br/AI-Testers-English-Shumani-Phaswana-ebook/dp/B0FJ78RTFV" target="_blank" rel="noopener">AI for Testers</a></li>
+          <li><a href="https://www.amazon.com/dp/B0H3CFQVPN" target="_blank" rel="noopener">AI for Everyone</a></li>
+          <li><a href="#books">All Books</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#blog">Free Articles</a></li>
+          <li><a href="#about">About the Author</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Shumani Phaswana. All rights reserved.</span>
+      <span>Built for organic search &amp; Amazon conversions</span>
+    </div>
+  </footer>
+
+</body>
+</html>
