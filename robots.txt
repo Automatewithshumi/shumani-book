@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shumani-book.vercel.app/sitemap.xml
