@@ -178,11 +178,18 @@
     .post-layout { display: grid; grid-template-columns: var(--content-width) 1fr; gap: 4rem; max-width: 1100px; margin: 0 auto; padding: clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,4rem); align-items: start; }
 
     /* Article */
-    .post-body { min-width: 0; max-width: 100%; overflow-wrap: break-word; }
+    .post-body {
+      min-width: 0;
+      max-width: 100%;
+      overflow: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
 
     .toc { background: var(--cream); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; padding: 1.5rem 1.8rem; margin-bottom: 3rem; }
     .toc-title { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
-    .toc ol { padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.45rem; }
+    .toc ol { padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.45rem; margin: 0; }
+    .toc li { overflow: hidden; text-overflow: ellipsis; }
     .toc a { font-size: 0.9rem; color: var(--teal); text-decoration: none; transition: color 0.2s; }
     .toc a:hover { color: var(--teal-dark); text-decoration: underline; }
 
@@ -254,7 +261,16 @@
     .faq-a { font-size: 0.97rem; color: var(--muted); line-height: 1.75; }
 
     /* Sidebar */
-    .post-sidebar { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1.5rem; min-width: 0; width: 100%; }
+    .post-sidebar {
+      position: sticky;
+      top: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      min-width: 0;
+      width: 100%;
+      overflow: hidden;
+    }
     .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
     .sidebar-book-cover { height: 180px; overflow: hidden; position: relative; background: var(--cream); }
     .sidebar-book-cover img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.4s ease; display: block; }

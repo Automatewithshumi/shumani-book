@@ -264,7 +264,13 @@
     }
 
     /* ===== ARTICLE BODY ===== */
-    .post-body { min-width: 0; max-width: 100%; overflow-wrap: break-word; }
+    .post-body {
+      min-width: 0;
+      max-width: 100%;
+      overflow: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
 
     /* TOC */
     .toc {
@@ -274,6 +280,9 @@
       border-radius: 4px;
       padding: 1.5rem 1.8rem;
       margin-bottom: 3rem;
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
     }
 
     .toc-title {
@@ -285,7 +294,8 @@
       margin-bottom: 1rem;
     }
 
-    .toc ol { padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.45rem; }
+    .toc ol { padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.45rem; margin: 0; }
+    .toc li { overflow: hidden; text-overflow: ellipsis; }
     .toc a { font-size: 0.9rem; color: var(--teal); text-decoration: none; transition: color 0.2s; }
     .toc a:hover { color: var(--teal-dark); text-decoration: underline; }
 
